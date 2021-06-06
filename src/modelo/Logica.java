@@ -2,66 +2,30 @@ package modelo;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import excepciones.Atrapado;
 import processing.core.PApplet;
 
 public class Logica implements Runnable{
 
 	private PApplet app;
-	private List<Marco> marcos;
-	private int iF;
-	private int sA;
-	private int rE;
+	private List<Marco> marcos = new ArrayList<Marco>();;
+	private ArrayList<Polo> polos = new ArrayList<Polo>();
 	
-	
-	public Logica(PApplet app) {
+	/***public Logica(PApplet app) {
+		
 		this.app = app;
+		marcos.add(new Marco(app, 15, 20, 5, 5));
+	
+		for (int i = 0; i < 20; i++) {
+			polos.add(new Polo(app,(int) app.random(app.width),(int) app.random(app.height)));
 		}
 
+	} ***/
 
+	
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		
 	}
-		
-	
 
-	
-
-	
-//METODO RUN
-	
-	/***
-	public void run() {
-		// TODO Auto-generated method stub
-		while(true) {
-			for (int i = 0; i < marcos.size(); i++) {
-				
-				Marco b = marcos.get(i);
-				b.moverse();
-				try {
-			
-				} catch (Atrapado e) {
-			
-					System.out.println(e.getMessage());
-				}
-				}
-				
-				
-			try {
-				Thread.sleep(30);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-	}***/
-	
-	
-
-		
-		
-	
-	
-}//final
+}
